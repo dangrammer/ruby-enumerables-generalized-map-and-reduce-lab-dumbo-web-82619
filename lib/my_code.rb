@@ -9,15 +9,15 @@ def map(source_array)
 end
 
 
-#def reduce(source_array, starting_point = 0)
- # value = starting_point
-  #source_array.each do |i|
-   # value = yield(value, i)
-#  end
-#  return value                          
-#end
+def reduce(source_array, starting_point = 0)
+  source_array[0].class == Integer ? value = starting_point : value = source_array[0]
+  source_array.each do |i|
+    value = yield(value, i)
+  end
+  return value                          
+end
 
-
+=begin
 def reduce(source_array, starting_point = 0)
   source_array[0].class == Integer ? value = starting_point : value = source_array[0]
   i = 0
@@ -27,7 +27,7 @@ def reduce(source_array, starting_point = 0)
   end
   return value
 end
-  
+ =end 
 
 # source_array = [ false, nil, nil, nil, true]
 # {|memo, n| memo || n}
