@@ -19,6 +19,7 @@ end
 
 
 def reduce(source_array, starting_point = 0)
+  if source_array[0].class == integer
   value = source_array[0]
   i = 0
   while i < source_array.length do
