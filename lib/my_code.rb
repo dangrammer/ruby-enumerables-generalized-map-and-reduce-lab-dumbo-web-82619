@@ -19,7 +19,7 @@ end
 
 
 def reduce(source_array, starting_point = 0)
-  if source_array[0].class == Integer || Float
+  if source_array[0].class == Integer
     value = starting_point
   else
    value = source_array[0]
