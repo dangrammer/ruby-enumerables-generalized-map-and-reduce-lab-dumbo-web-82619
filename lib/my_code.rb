@@ -19,8 +19,11 @@ end
 
 
 def reduce(source_array, starting_point = 0)
-  if source_array[0].class == integer
-  value = source_array[0]
+  if source_array[0].class == Integer
+    value = starting_point
+  else
+   value = source_array[0]
+  end
   i = 0
   while i < source_array.length do
     value = yield(value, source_array[i])
